@@ -1,0 +1,72 @@
+.homePageContents {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 10px;
+  background-image: url("../../assets/home/bgImgOne.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  min-block-size: 100vh;
+  inline-size: 100%;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .homePageContents {
+    background-attachment: scroll;
+  }
+}
+
+.homePageContents::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.homePageContents > * {
+  position: relative;
+  z-index: 2;
+}
+
+.homePageWelcomeCont {
+  text-align: center;
+  background-color: #f0ede3;
+  padding: 80px 20px 50px 20px;
+  border-radius: 10px;
+}
+.homePageWelcomeCont h5 {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.homePageWelcomeCont p {
+  font-size: 24px;
+}
+
+.homePageWelcomeCont button {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 19px;
+  background: #698f65;
+  margin-block-start: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 7px;
+}
+
+.treatments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
