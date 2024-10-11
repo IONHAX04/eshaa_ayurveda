@@ -70,3 +70,63 @@
   align-items: center;
   justify-content: center;
 }
+
+.logoImg {
+  block-size: 200px;
+  inline-size: 200px;
+}
+/* 
+.homePageWelcomeCont {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+} */
+
+.homeContOne,
+.homeContTwo {
+  margin: 0;
+  padding: 30;
+}
+
+.homeWelcomeContents {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-block-start: 80px;
+}
+
+.welcomeEshaa h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.welcomeEshaa p {
+  font-size: 21px;
+  padding-block-start: 20px;
+  text-align: justify;
+}
+
+.aboutEshaa h3 {
+  font-size: 30px;
+  margin: 20px 0px;
+  font-weight: bold;
+}
+
+.aboutEshaa p {
+  font-size: 21px;
+  margin: 12px 0px;
+  text-align: justify;
+}
+
+.homeContTwoImg {
+  block-size: 300px;
+  object-fit: cover;
+  inline-size: 100%;
+}
+
+.homeContOneImg {
+  block-size: 600px;
+  object-fit: cover;
+  inline-size: 100%;
+}

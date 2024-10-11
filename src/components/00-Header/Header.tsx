@@ -1,12 +1,17 @@
 import { useState } from "react";
 import de from "../../assets/language/de.svg";
 import { useNavigate } from "react-router-dom";
-// import logo from "../../assets/logo/logo.png";
+import logo from "../../assets/logo/logo9.jpg";
 import "./Header.css";
 
 export default function Header() {
   const navigate = useNavigate();
   const [menuStatus, setMenuStatus] = useState(false);
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setMenuStatus(false);
+  };
 
   return (
     <>
@@ -18,14 +23,14 @@ export default function Header() {
         >
           <div className="w-[80%] h-[10vh] lg:w-[90%] flex justify-evenly items-center">
             <div className="w-[50%] lg:w-[30%] flex justify-start">
-              {/* <img src={logo} className="w-[80px]" alt="log" /> */}
-              <h2 className="companyName mt-2">Eshaa Ayurveda</h2>
+              <img src={logo} className="w-[250px]" alt="log" />
+              {/* <h2 className="companyName mt-2">Eshaa Ayurveda</h2> */}
             </div>
             <div className="hidden lg:flex w-[90%] justify-center gap-x-10">
               <div
                 className="text-[22px] cursor-pointer mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/");
+                  handleNavigation("/");
                 }}
               >
                 Home
@@ -33,7 +38,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/about");
+                  handleNavigation("/about");
                 }}
               >
                 About Us
@@ -41,7 +46,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/treatments");
+                  handleNavigation("/treatments");
                 }}
               >
                 Treatments
@@ -49,7 +54,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/price");
+                  handleNavigation("/price");
                 }}
               >
                 Price List
@@ -57,7 +62,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/appointments");
+                  handleNavigation("/appointments");
                 }}
               >
                 Appointments
@@ -65,7 +70,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/voucher");
+                  handleNavigation("/voucher");
                 }}
               >
                 Voucher
@@ -73,7 +78,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/gallery");
+                  handleNavigation("/gallery");
                 }}
               >
                 Gallery
@@ -81,7 +86,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  mt-2 font-semibold underline-animation"
                 onClick={() => {
-                  navigate("/contact");
+                  handleNavigation("/contact");
                 }}
               >
                 Contact
@@ -133,7 +138,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer py-3 font-semibold"
                 onClick={() => {
-                  navigate("/");
+                  handleNavigation("/");
                 }}
               >
                 Home
@@ -141,7 +146,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/about");
+                  handleNavigation("/about");
                 }}
               >
                 About Us
@@ -149,7 +154,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/treatments");
+                  handleNavigation("/treatments");
                 }}
               >
                 Treatments
@@ -157,7 +162,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/price");
+                  handleNavigation("/price");
                 }}
               >
                 Price List
@@ -165,7 +170,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/appointments");
+                  handleNavigation("/appointments");
                 }}
               >
                 Appointments
@@ -173,7 +178,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/voucher");
+                  handleNavigation("/voucher");
                 }}
               >
                 Voucher
@@ -181,7 +186,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/gallery");
+                  handleNavigation("/gallery");
                 }}
               >
                 Gallery
@@ -189,7 +194,7 @@ export default function Header() {
               <div
                 className="text-[22px] cursor-pointer  py-3 font-semibold"
                 onClick={() => {
-                  navigate("/contact");
+                  handleNavigation("/contact");
                 }}
               >
                 Contact
