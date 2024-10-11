@@ -92,7 +92,7 @@ export default function Footer() {
                   </Nav.Link> */}
                 </Nav>
               </Col>
-              <Col md={4} lg={2} className="mb-4">
+              <Col md={4} lg={3} className="mb-4">
                 <h3 className="text-white text-xl mb-3">
                   Opening Hours                </h3>
                 <Nav className="flex-column">
