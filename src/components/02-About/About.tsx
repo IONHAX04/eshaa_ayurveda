@@ -10,7 +10,7 @@ export default function About() {
         </div>
         <div className="emailFormContxt w-full md:w-6/12 mx-auto imageContainer">
           <img src={comingsoon}
-            style={{ blockSize: "100vh", objectFit: "cover", position: "fixed" }} />
+            style={{ blockSize: "100vh", objectFit: "cover" }} />
         </div>
       </div>
     </div>

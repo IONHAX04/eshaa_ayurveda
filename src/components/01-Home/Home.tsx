@@ -85,7 +85,7 @@ export default function Home() {
               We believe in the exceptional potential of Ayurveda that can help
               restore all elements of the mind, body, and soul back to harmony.
               Nestled in Zurich, we offer a sanctuary of healing, where
-              Ayurvedic practices meet modern well–being. Whether you are
+              Ayurvedic practices meet modern well being. Whether you are
               seeking relief from chronic ailments or merely wish to boost your
               energy, our Ayurvedic clinic generally stands ready to meet all
               your needs. Explore a holistic approach to health and wellness and
