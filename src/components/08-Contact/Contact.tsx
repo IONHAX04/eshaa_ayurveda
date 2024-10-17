@@ -1,5 +1,6 @@
 // import ayurveda from "../../assets/contact/ayurveda.svg";
 import { FaChevronRight } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 import "./Contact.css";
 
@@ -18,30 +19,32 @@ interface Treatment {
 }
 
 export default function Contact() {
+  const { t } = useTranslation("global");
+
   const treatments: Treatment[] = [
     {
       image: location,
-      title: "Our Location",
+      title: t("contact.location"),
       contentOne: "Kanzleistrasse 115",
       contentTwo: "8004 Zurich, Switzerland.",
     },
     {
       image: email,
-      title: "Our Email",
+      title: t("contact.email"),
       contentOne: "contact@eshaawellness.com",
-      contentTwo: "We will respond within 24 hours",
+      contentTwo: t("contact.emailQuote"),
     },
     {
       image: phone,
-      title: "Our Phone",
+      title: t("contact.phone"),
       contentOne: "0041 (0) 76 426 34 44",
-      contentTwo: "Mon-Fri: 9am - 6pm",
+      contentTwo: t("contact.phoneTime"),
     },
     {
       image: opening,
-      title: "Opening Hours",
-      contentOne: "Mon-Fri: 9am - 6pm",
-      contentTwo: "Sat-Sun: Closed",
+      title: t("contact.openingHrs"),
+      contentOne: t("contact.hrsOne"),
+      contentTwo: t("contact.hrsTwo"),
     },
   ];
 
@@ -49,22 +52,19 @@ export default function Contact() {
     <div className="contactContents">
       <div className="contactUs">
         <div className="contactUsHeader mt-5 w-full md:w-10/12 mx-auto">
-          <h3>Contact</h3>
+          <h3>{t("nav.contact")}</h3>
           <div className="breadCrumb">
-            <span>Home</span>
+            <span>{t("nav.home")}</span>
             <FaChevronRight />
-            <p>Contact Us</p>
+            <p>{t("nav.contact")}</p>
           </div>
         </div>
       </div>
       <div className="contactGetIn">
-        <h4>Get In Touch</h4>
-        <h3>With Eshaa Wellness</h3>
+        <h4>{t("contact.getInTouch")}</h4>
+        <h3>{t("contact.withEsha")}</h3>
         <p className="w-full md:w-7/12 mx-auto">
-          At Eshaa Wellness, we strive to provide you with holistic health and
-          wellness. Do you have question s about our therapies? Have you been
-          waiting to schedule an appointment? Want to find out about our
-          services? Connect with us- we'd be glad to hear from you.{" "}
+          {t("contact.contactUsQuote")}
         </p>
       </div>
       <div className="grid contactUsGrids w-full md:w-10/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
@@ -84,26 +84,22 @@ export default function Contact() {
       <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
         <div className="emailFormContxt w-full md:w-5/12 mx-auto">
           <div className="relative my-6 enquiryTxt">
-            <h2>Get in touch Online </h2>
-            <p>
-              If you'd prefer, you can reach out to us through our contact form
-              on this site as well. Just fill in the particulars and we'll get
-              back in touch with you shortly.{" "}
-            </p>
+            <h2>{t("contact.formHeader")} </h2>
+            <p>{t("contact.formQuote")}</p>
           </div>
           <div className="relative my-6">
             <input
               id="id-11"
               type="text"
               name="id-11"
-              placeholder="First Name"
+              placeholder={t("contact.name")}
               className="relative w-full h-10 px-10 pl-12 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-emerald-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400"
             />
             <label
               htmlFor="id-11"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Name
+              {t("contact.name")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -127,17 +123,17 @@ export default function Contact() {
           </div>
           <div className="relative my-6">
             <input
-              id="id-11"
-              type="text"
-              name="id-11"
+              id="email"
+              type="email"
+              name="email"
               placeholder="Email"
               className="relative w-full h-10 px-10 pl-12 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-emerald-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400"
             />
             <label
-              htmlFor="id-11"
+              htmlFor="email"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Email
+              {t("contact.emailUr")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,17 +157,17 @@ export default function Contact() {
           </div>
           <div className="relative my-6">
             <input
-              id="id-11"
-              type="text"
-              name="id-11"
+              id="mobile"
+              type="tel"
+              name="mobile"
               placeholder="your phone"
               className="relative w-full h-10 px-10 pl-12 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-emerald-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400"
             />
             <label
-              htmlFor="id-11"
+              htmlFor="mobile"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Phone
+              {t("contact.mobile")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +200,7 @@ export default function Contact() {
               htmlFor="id-11"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Message
+              {t("contact.comment")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +223,7 @@ export default function Contact() {
             </svg>
           </div>
           <div className="relative my-6 sendBtn">
-            <button className="messageBtn">Send Message</button>
+            <button className="messageBtn">{t("contact.send")}</button>
           </div>
         </div>
         <div className="emailFormContxt w-full md:w-5/12 mx-auto">

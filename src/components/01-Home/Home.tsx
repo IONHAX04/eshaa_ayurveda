@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import massage from "../../assets/home/massage.png";
 import specialBath from "../../assets/home/bath.png";
 import facial from "../../assets/home/facial.png";
@@ -26,6 +28,7 @@ interface TreatmentList {
 }
 
 export default function Home() {
+  const { t } = useTranslation("global");
   const treatments: Treatment[] = [
     { image: massage, title: "Massage Therapy" },
     { image: specialBath, title: "Special Bath" },
@@ -138,22 +141,12 @@ export default function Home() {
       <div className="divider w-full md:w-8/12 mx-auto"></div>
 
       <div className="ourTreatments ">
-        <h2>Our Treatments</h2>
-        <p className="w-full md:w-7/12 mx-auto">
-          Eshaa Wellness provides a range of Ayurvedic treatments to help
-          balance the imbalances caused by doshas so that overall health and
-          well-being can be met.{" "}
-        </p>
+        <h2>{t("home.ourTreatments")}</h2>
+        <p className="w-full md:w-7/12 mx-auto">{t("home.treatmentConts")}</p>
         <div className="treatmentOne treatments">
-          <h3> ABHYANGA</h3>
+          <h3> {t("home.treatmentOne")}</h3>
           <div className="treatmentPoints">
-            <p>
-              Relaxes and eliminates fatigue &nbsp;&nbsp;|&nbsp;&nbsp; Nourishes
-              the tissues &nbsp;&nbsp;| &nbsp;&nbsp;Relieves sleep disorders
-              &nbsp;&nbsp;|&nbsp;&nbsp; Rejuvenating, prevents the age process
-              &nbsp;&nbsp;|&nbsp;&nbsp; Improves blood circulation, lymph flow
-              and nervous system{" "}
-            </p>
+            <p>{t("home.treatmentOneCont")}</p>
           </div>
         </div>
         <div className="treatmentTwo treatments">

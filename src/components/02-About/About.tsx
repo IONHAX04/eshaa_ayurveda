@@ -14,6 +14,10 @@ export default function About() {
             <p>About Us</p>
           </div>
         </div>
+        <div className="aboutUsContents">
+          <div className="w-full md:w-6/12 mx-auto"></div>
+          <div className="w-full md:w-6/12 mx-auto"></div>
+        </div>
       </div>
     </div>
   );

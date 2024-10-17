@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
-import Notify from 'simple-notify'
-import 'simple-notify/dist/simple-notify.css'
+import Notify from "simple-notify";
+import "simple-notify/dist/simple-notify.css";
 
 import "./Voucher.css";
 
 export default function Voucher() {
+  const { t } = useTranslation("global");
+
   const [formData, setFormData] = useState({
     fname: "",
     lname: "",
@@ -36,37 +39,28 @@ export default function Voucher() {
     <div className="voucher">
       <div className="contactUs">
         <div className="contactUsHeader mt-5 w-full md:w-10/12 mx-auto">
-          <h3>Voucher</h3>
+          <h3>{t("nav.voucher")}</h3>
           <div className="breadCrumb">
             <span>Home</span>
             <FaChevronRight />
-            <p>Voucher</p>
+            <p>{t("nav.voucher")}</p>
           </div>
         </div>
       </div>
       <div className="relative my-6 enquiryTxt">
-        <h2>Book Your Consultation Today! </h2>
-        <p className="w-full md:w-7/12 ">
-          Experience the benefits of Holistic Health with Eshaa Wellness. Reach
-          out to us today to schedule your appointment and take the first step
-          toward a harmonious and vibrant life.
-        </p>
-        <p className="w-full md:w-7/12 ">
-          Taking that first step towards holistic wellness is easy in Eshaa
-          Wellness. Our dedicated team is here to assist you in scheduling your
-          appointment, ensuring you receive the personalized care you deserve.{" "}
-        </p>
+        <h2>{t("voucher.voucherHeader")} </h2>
+        <p className="w-full md:w-7/12 ">{t("voucher.voucherContOne")}</p>
+        <p className="w-full md:w-7/12 ">{t("voucher.voucherContTwo")}</p>
       </div>
       <div className="voucherContents">
         <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
-          <form className="emailFormContxt w-full md:w-5/12 mx-auto" onSubmit={handleSubmit}>
+          <form
+            className="emailFormContxt w-full md:w-5/12 mx-auto"
+            onSubmit={handleSubmit}
+          >
             <div className="relative my-6 enquiryTxt">
-              <h2>Booking Your Appointment ! </h2>
-              <p>
-                Book an appointment at your convenient time through our online
-                booking service. Appointment is also facilitated through a phone
-                call or direct visit at our clinic.
-              </p>
+              <h2>{t("voucher.bookApt")} </h2>
+              <p>{t("voucher.bookAptCont")}</p>
             </div>
             {/* CALENDAR - DATE TIME */}
             <div className="relative my-6">
@@ -83,7 +77,7 @@ export default function Voucher() {
                 htmlFor="id-11"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Date & Time
+                {t("voucher.date")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +114,7 @@ export default function Voucher() {
                   htmlFor="fname"
                   className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-4 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
                 >
-                  First Name
+                  {t("voucher.firstName")}
                 </label>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +151,7 @@ export default function Voucher() {
                   htmlFor="lname"
                   className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-4 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
                 >
-                  Last Name
+                  {t("voucher.lastName")}
                 </label>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +189,7 @@ export default function Voucher() {
                 htmlFor="street"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Street
+                {t("voucher.street")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +228,7 @@ export default function Voucher() {
                   htmlFor="zip"
                   className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-4 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
                 >
-                  Zip
+                  {t("voucher.zip")}
                 </label>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +266,7 @@ export default function Voucher() {
                   htmlFor="place"
                   className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-4 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
                 >
-                  Place
+                  {t("voucher.place")}
                 </label>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -294,9 +288,7 @@ export default function Voucher() {
                   />
                 </svg>
               </div>
-
             </div>
-
 
             {/* NOTE TO ORDER */}
             <div className="relative my-6">
@@ -313,7 +305,7 @@ export default function Voucher() {
                 htmlFor="order"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Notes To Order
+                {t("voucher.notes")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -351,7 +343,7 @@ export default function Voucher() {
                 htmlFor="tel"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Tel / Mobile
+                {t("voucher.tel")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -389,7 +381,7 @@ export default function Voucher() {
                 htmlFor="email"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Your Email
+                {t("voucher.email")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -427,7 +419,7 @@ export default function Voucher() {
                 htmlFor="phone"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Your Phone
+                {t("voucher.phone")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -458,17 +450,19 @@ export default function Voucher() {
                 className="relative w-full h-10 px-10 pl-12 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-emerald-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400"
               >
                 <option value="" disabled selected hidden>
-                  Payment
+                  {t("voucher.payment")}
                 </option>
-                <option value="payment1">Payment 1</option>
-                <option value="payment2">Payment 2</option>
-                <option value="payment3">Payment 3</option>
+                <option value="payment1">Twint: +41 76 426 34 44</option>
+                <option value="payment2">
+                  ebanking: CH11 0483 5175 1551 7100 0
+                </option>
+                <option value="payment3">Pre Payment</option>
               </select>
               <label
                 htmlFor="payment"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Payment
+                {t("voucher.payment")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -502,7 +496,7 @@ export default function Voucher() {
                 htmlFor="textarea"
                 className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
               >
-                Your Message
+                {t("voucher.message")}
               </label>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -525,35 +519,35 @@ export default function Voucher() {
               </svg>
             </div>
 
-            <div className="relative my-6 sendBtn"
+            <div
+              className="relative my-6 sendBtn"
               onClick={() => {
                 new Notify({
-                  status: 'success',
-                  title: 'Message Success',
-                  text: 'Message Sent Successfully !',
-                  effect: 'fade',
+                  status: "success",
+                  title: "Message Success",
+                  text: "Message Sent Successfully !",
+                  effect: "fade",
                   speed: 200,
-                  customClass: '',
-                  customIcon: '',
+                  customClass: "",
+                  customIcon: "",
                   showIcon: true,
                   showCloseButton: true,
                   autoclose: true,
                   autotimeout: 1500,
-                  type: 'outline',
-                  position: 'right top',
-                  customWrapper: '',
-                })
-              }}>
-              <button className="messageBtn">Send Message</button>
+                  type: "outline",
+                  position: "right top",
+                  customWrapper: "",
+                });
+              }}
+            >
+              <button className="messageBtn">{t("voucher.sendMsg")}</button>
             </div>
           </form>
           <div className="emailFormContxt w-full md:w-5/12 mx-auto">
             <form className="emailFormContxt" onSubmit={handleSubmit}>
               <div className="relative my-6 enquiryTxt">
-                <h2>Our noble voucher box ! </h2>
-                <p>
-
-                </p>
+                <h2>{t("voucher.noble")} </h2>
+                <p></p>
               </div>
               {/* CALENDAR - DATE TIME */}
               <div className="relative my-6">
@@ -563,7 +557,7 @@ export default function Voucher() {
                   className="relative w-full h-10 px-10 pl-12 text-sm placeholder-transparent transition-all border rounded outline-none focus-visible:outline-none peer border-slate-200 text-slate-500 autofill:bg-white invalid:border-pink-500 invalid:text-pink-500 focus:border-emerald-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400"
                 >
                   <option value="" disabled selected hidden>
-                    Voucher value in CHF
+                    {t("voucher.voucherValue")}
                   </option>
                   <option value="payment1">50</option>
                   <option value="payment2">100</option>
@@ -574,7 +568,7 @@ export default function Voucher() {
                   htmlFor="voucher"
                   className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
                 >
-                  Voucher value in CHF
+                  {t("voucher.voucherValue")}
                 </label>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -609,7 +603,7 @@ export default function Voucher() {
                   htmlFor="greeting"
                   className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-4 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
                 >
-                  Personal Greeting letter
+                  {t("voucher.personal")}
                 </label>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -631,7 +625,6 @@ export default function Voucher() {
                   />
                 </svg>
               </div>
-
             </form>
           </div>
         </div>

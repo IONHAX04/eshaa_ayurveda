@@ -18,9 +18,15 @@ export default function TreatmentCard({
         alt={title}
         className="w-[150px] h-[150px] object-cover mb-4"
       />
-      <h5 className="text-lg font-semibold text-gray-800">{title}</h5>
-      <h5 className="text-lg font-medium text-gray-800">{contentOne}</h5>
-      <h5 className="text-lg font-medium text-gray-800">{contentTwo}</h5>
+      <h5 className="text-lg text-center font-semibold text-gray-800">
+        {title}
+      </h5>
+      <h5 className="text-lg text-center font-medium text-gray-800">
+        {contentOne}
+      </h5>
+      <h5 className="text-lg text-center font-medium text-gray-800">
+        {contentTwo}
+      </h5>
     </div>
   );
 }

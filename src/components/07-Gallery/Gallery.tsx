@@ -1,19 +1,22 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { FaChevronRight } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 import "./Gallery.css";
 
 const Gallery = () => {
+  const { t } = useTranslation("global");
+
   return (
     <div className="galleryContents">
       <div className="contactUs">
         <div className="contactUsHeader mt-5 w-full md:w-10/12 mx-auto">
-          <h3>Gallery</h3>
+          <h3>{t("nav.gallery")}</h3>
           <div className="breadCrumb">
             <span>Home</span>
             <FaChevronRight />
-            <p>Gallery</p>
+            <p>{t("nav.gallery")}</p>
           </div>
         </div>
       </div>
@@ -21,18 +24,15 @@ const Gallery = () => {
         <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
           <div>
             <span className="block mb-4 text-xl md:text-bold text-[#587855] font-medium">
-              Discover Your Serenity in Eshaa Wellness
+              {t("gallery.galleryHeaderOne")}
             </span>
             <h3 className="text-4xl md:text-6xl font-semibold">
-              Your Journey to wellness begins here!
+              {t("gallery.galleryHeaderTwo")}
             </h3>
             <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-              Take a visual walk through our gallery, imagine yourself within
-              the peaceful healing environment we've created. Each image here
-              represents our commitment towards offering holistic health and
-              wellness.
+              {t("gallery.galleryDesc")}
             </p>
-            <button className="bookAptBtn">Book an Appointment</button>
+            <button className="bookAptBtn">{t("bookApt.book")}</button>
           </div>
           <ShuffleGrid />
         </section>
