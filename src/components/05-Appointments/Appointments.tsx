@@ -1,19 +1,26 @@
-import comingsoon from "../../assets/appointment/comingsoon.png";
+import React from "react";
+import FullCalendar from "@fullcalendar/react"; // Updated name
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+
 import "./Appointments.css";
 
-export default function Appointments() {
+const Appointments: React.FC = () => {
   return (
-    <div>
-      <div className="emailContactForm mt-5 w-full md:w-12/12 mx-auto">
-        <div className="emailFormContxt stayTuned w-full md:w-6/12 mx-auto">
-          <h2>Coming Soon</h2>
-          <p>This page is in progress... Stay tuned for updates...</p>
-        </div>
-        <div className="emailFormContxt w-full md:w-6/12 mx-auto imageContainer">
-          <img src={comingsoon}
-            style={{ blockSize: "100vh", objectFit: "cover" }} />
-        </div>
-      </div>
+    <div className="calendarView">
+      <FullCalendar
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        initialView="dayGridMonth"
+        headerToolbar={{
+          start: "today prev,next",
+          center: "title",
+          end: "dayGridMonth,timeGridWeek,timeGridDay",
+        }}
+        height="90vh"
+      />
     </div>
-  )
-}
+  );
+};
+
+export default Appointments;

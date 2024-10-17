@@ -17,9 +17,8 @@ export default function Header() {
     <>
       <div className="w-full fixed top-0 left-0 z-50 bg-white">
         <div
-          className={`w-full flex ${
-            menuStatus ? "fixed z-50" : ""
-          } justify-center items-center h-[80px] bg-white`}
+          className={`w-full flex ${menuStatus ? "fixed z-50" : ""
+            } justify-center items-center h-[80px] bg-white`}
         >
           <div className="w-[80%] h-[10vh] lg:w-[90%] flex justify-evenly items-center">
             <div className="w-[50%] lg:w-[30%] flex justify-start">
@@ -97,11 +96,10 @@ export default function Header() {
             </div>
             <div className="w-[0%] ml-14 flex lg:hidden justify-center items-center">
               <button
-                className={`relative order-10 block self-center lg:hidden ${
-                  menuStatus
+                className={`relative order-10 block self-center lg:hidden ${menuStatus
                     ? "visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(2)]:-rotate-45 [&_span:nth-child(3)]:w-0 "
                     : ""
-                }`}
+                  }`}
                 onClick={() => setMenuStatus(!menuStatus)}
                 aria-expanded={menuStatus ? true : false}
                 aria-label="Toggle navigation"
@@ -127,11 +125,10 @@ export default function Header() {
 
         {/* Fullscreen Menu for Mobile */}
         <div
-          className={`w-full h-[90vh] overflow-y-auto z-50 mt-[10vh] fixed top-0 left-0 transition-all duration-500 ease-in-out bg-white           transform ${
-            menuStatus
+          className={`w-full h-[90vh] overflow-y-auto z-50 mt-[10vh] fixed top-0 left-0 transition-all duration-500 ease-in-out bg-white           transform ${menuStatus
               ? "translate-x-0 opacity-100 visible"
               : "-translate-x-full opacity-0 invisible"
-          }`}
+            }`}
         >
           <div className="flex flex-col items-center justify-start h-full">
             <div className="w-[80%] mt-10">

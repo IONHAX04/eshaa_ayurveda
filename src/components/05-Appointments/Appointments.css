@@ -22,3 +22,7 @@
     display: block;
   }
 }
+
+.calendarView {
+  padding: 140px 50px;
+}

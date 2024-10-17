@@ -1,18 +1,20 @@
-import comingsoon from "../../assets/appointment/comingsoon.png";
+import { FaChevronRight } from "react-icons/fa6";
+
+import "./About.css";
 
 export default function About() {
   return (
     <div>
-      <div className="emailContactForm mt-5 w-full md:w-12/12 mx-auto">
-        <div className="emailFormContxt stayTuned w-full md:w-6/12 mx-auto">
-          <h2>Coming Soon</h2>
-          <p>This page is in progress... Stay tuned for updates...</p>
-        </div>
-        <div className="emailFormContxt w-full md:w-6/12 mx-auto imageContainer">
-          <img src={comingsoon}
-            style={{ blockSize: "100vh", objectFit: "cover" }} />
+      <div className="contactUs">
+        <div className="contactUsHeader mt-5 w-full md:w-10/12 mx-auto">
+          <h3>About Us</h3>
+          <div className="breadCrumb">
+            <span>Home</span>
+            <FaChevronRight />
+            <p>About Us</p>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

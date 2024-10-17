@@ -12,14 +12,12 @@ import pricelist from "../../assets/home/pricelist.png";
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-
 // import pointer from "../../assets/contact/ayurveda.svg";
 
 interface Treatment {
   image: string;
   title: string;
 }
-
 
 interface TreatmentList {
   name: string;
@@ -38,12 +36,12 @@ export default function Home() {
   ];
 
   const treatmentData: TreatmentList[] = [
-    { name: 'Whole Body', duration: '60 Mins', price: '150.00 CHF' },
-    { name: 'Back', duration: '30 Mins', price: '120.00 CHF' },
-    { name: 'Shirodhara', duration: '30 Mins', price: '120.00 CHF' },
-    { name: 'Udwarthanam', duration: '60 Mins', price: '150.00 CHF' },
-    { name: 'Njavara Kizhi', duration: '60 Mins', price: '150.00 CHF' },
-    { name: 'Fussreflexzonen', duration: '30 Mins', price: '120.00 CHF' }
+    { name: "Whole Body", duration: "60 Mins", price: "150.00 CHF" },
+    { name: "Back", duration: "30 Mins", price: "120.00 CHF" },
+    { name: "Shirodhara", duration: "30 Mins", price: "120.00 CHF" },
+    { name: "Udwarthanam", duration: "60 Mins", price: "150.00 CHF" },
+    { name: "Njavara Kizhi", duration: "60 Mins", price: "150.00 CHF" },
+    { name: "Fussreflexzonen", duration: "30 Mins", price: "120.00 CHF" },
   ];
 
   return (
@@ -137,60 +135,80 @@ export default function Home() {
         </div>
       </div>
 
-
       <div className="divider w-full md:w-8/12 mx-auto"></div>
 
       <div className="ourTreatments ">
         <h2>Our Treatments</h2>
-        <p className="w-full md:w-7/12 mx-auto">Eshaa Wellness provides a range of Ayurvedic treatments to help balance the imbalances caused by doshas so that overall health and well-being can be met. </p>
+        <p className="w-full md:w-7/12 mx-auto">
+          Eshaa Wellness provides a range of Ayurvedic treatments to help
+          balance the imbalances caused by doshas so that overall health and
+          well-being can be met.{" "}
+        </p>
         <div className="treatmentOne treatments">
           <h3> ABHYANGA</h3>
           <div className="treatmentPoints">
-            <p>Relaxes and eliminates fatigue &nbsp;&nbsp;|&nbsp;&nbsp; Nourishes the tissues &nbsp;&nbsp;| &nbsp;&nbsp;Relieves sleep disorders &nbsp;&nbsp;|&nbsp;&nbsp;
-              Rejuvenating, prevents the age process &nbsp;&nbsp;|&nbsp;&nbsp;
-              Improves blood circulation, lymph flow and nervous system </p>
+            <p>
+              Relaxes and eliminates fatigue &nbsp;&nbsp;|&nbsp;&nbsp; Nourishes
+              the tissues &nbsp;&nbsp;| &nbsp;&nbsp;Relieves sleep disorders
+              &nbsp;&nbsp;|&nbsp;&nbsp; Rejuvenating, prevents the age process
+              &nbsp;&nbsp;|&nbsp;&nbsp; Improves blood circulation, lymph flow
+              and nervous system{" "}
+            </p>
           </div>
         </div>
         <div className="treatmentTwo treatments">
           <h3>PRISTHABYANGA</h3>
-          <p>Intervertebral disc regeneration &nbsp;&nbsp; | &nbsp;&nbsp; Lumbago&nbsp;&nbsp; | &nbsp;&nbsp; Back pain &nbsp;&nbsp; | &nbsp;&nbsp;Relieves muscle spasms and tension&nbsp;&nbsp; | &nbsp;&nbsp; Improves blood circulation, lymph flow and nervous system &nbsp;&nbsp; </p>
+          <p>
+            Intervertebral disc regeneration &nbsp;&nbsp; | &nbsp;&nbsp;
+            Lumbago&nbsp;&nbsp; | &nbsp;&nbsp; Back pain &nbsp;&nbsp; |
+            &nbsp;&nbsp;Relieves muscle spasms and tension&nbsp;&nbsp; |
+            &nbsp;&nbsp; Improves blood circulation, lymph flow and nervous
+            system &nbsp;&nbsp;{" "}
+          </p>
         </div>
         <div className="treatmentThree treatments">
           <h3>PADHABHYANGA</h3>
-          <p>Eliminates cornea and cracks &nbsp;&nbsp; | &nbsp;&nbsp;
-            Fatigue, numbness and stiffness &nbsp;&nbsp; | &nbsp;&nbsp;
-            Improves vision &nbsp;&nbsp; | &nbsp;&nbsp;
-            Relieves sleep disorders &nbsp;&nbsp; | &nbsp;&nbsp;
-            Against nervousness &nbsp;&nbsp; | &nbsp;&nbsp;
-            Buzz in the head</p>
+          <p>
+            Eliminates cornea and cracks &nbsp;&nbsp; | &nbsp;&nbsp; Fatigue,
+            numbness and stiffness &nbsp;&nbsp; | &nbsp;&nbsp; Improves vision
+            &nbsp;&nbsp; | &nbsp;&nbsp; Relieves sleep disorders &nbsp;&nbsp; |
+            &nbsp;&nbsp; Against nervousness &nbsp;&nbsp; | &nbsp;&nbsp; Buzz in
+            the head
+          </p>
         </div>
         <div className="treatmentFour treatments">
           <h3>PINDASVEDA</h3>
-          <p>Good for movement restrictions &nbsp;&nbsp; | &nbsp;&nbsp;
-            Muscle hardening&nbsp;&nbsp; | &nbsp;&nbsp;
-            With swelling&nbsp;&nbsp; | &nbsp;&nbsp;
-            Accumulations and deposits&nbsp;&nbsp; | &nbsp;&nbsp;
-            Good for cellulite</p>
+          <p>
+            Good for movement restrictions &nbsp;&nbsp; | &nbsp;&nbsp; Muscle
+            hardening&nbsp;&nbsp; | &nbsp;&nbsp; With swelling&nbsp;&nbsp; |
+            &nbsp;&nbsp; Accumulations and deposits&nbsp;&nbsp; | &nbsp;&nbsp;
+            Good for cellulite
+          </p>
         </div>
       </div>
 
       <div className="galleryPreview w-full md:w-10/12 mx-auto">
         <h2>Gallery</h2>
         <h5>For your Ayurveda course program and your health</h5>
-        <p> ABHYANGA &nbsp;&nbsp; / &nbsp;&nbsp; PRISTHABYANGA &nbsp;&nbsp; / &nbsp;&nbsp; PINDASVEDA &nbsp;&nbsp; / &nbsp;&nbsp;SAMPLE &nbsp;&nbsp; / &nbsp;&nbsp;SHIRO VASTHI</p>
+        <p>
+          {" "}
+          ABHYANGA &nbsp;&nbsp; / &nbsp;&nbsp; PRISTHABYANGA &nbsp;&nbsp; /
+          &nbsp;&nbsp; PINDASVEDA &nbsp;&nbsp; / &nbsp;&nbsp;SAMPLE &nbsp;&nbsp;
+          / &nbsp;&nbsp;SHIRO VASTHI
+        </p>
         <ShuffleGrid />
       </div>
 
-
       <div className="divider w-full md:w-8/12 mx-auto"></div>
-
 
       <div className="priceList">
         <h4>Our Services</h4>
         <h2>Pamper Yourself and Get Relaxing </h2>
         <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
           <div className="emailFormContxt w-full md:w-5/12 mx-auto">
-            <img src={pricelist} alt="#"
+            <img
+              src={pricelist}
+              alt="#"
               className="h-[400px] w-[100%] lg:h-[80%] lg:w-[100%] mt-2"
               style={{ objectFit: "cover" }}
             />
@@ -216,9 +234,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
-
 
       {/* CONTACT FORM */}
       <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
@@ -384,7 +399,6 @@ export default function Home() {
     </div>
   );
 }
-
 
 const shuffle = (array: (typeof squareData)[0][]) => {
   let currentIndex = array.length,
