@@ -20,33 +20,36 @@ export default function Treatments() {
             </div>
           </div>
           <div className="treatmentTwo treatments">
-            <h3>PRISTHABYANGA</h3>
-            <p>
-              Intervertebral disc regeneration &nbsp;&nbsp; | &nbsp;&nbsp;
-              Lumbago&nbsp;&nbsp; | &nbsp;&nbsp; Back pain &nbsp;&nbsp; |
-              &nbsp;&nbsp; Relieves muscle spasms and tension&nbsp;&nbsp; |
-              &nbsp;&nbsp; Improves blood circulation, lymph flow and nervous
-              system
-            </p>
+            <h3>{t("home.treatmentTwo")}</h3>
+            <p>{t("home.treatmentTwoCont")}</p>
           </div>
           <div className="treatmentThree treatments">
-            <h3>PADHABHYANGA</h3>
-            <p>
-              Eliminates cornea and cracks &nbsp;&nbsp; | &nbsp;&nbsp; Fatigue,
-              numbness and stiffness &nbsp;&nbsp; | &nbsp;&nbsp; Improves vision
-              &nbsp;&nbsp; | &nbsp;&nbsp; Relieves sleep disorders &nbsp;&nbsp;
-              | &nbsp;&nbsp; Against nervousness &nbsp;&nbsp; | &nbsp;&nbsp;
-              Buzz in the head
-            </p>
+            <h3>{t("home.treatmentThree")}</h3>
+            <p>{t("home.treatmentThreeCont")}</p>
           </div>
           <div className="treatmentFour treatments">
-            <h3>PINDASVEDA</h3>
-            <p>
-              Good for movement restrictions &nbsp;&nbsp; | &nbsp;&nbsp; Muscle
-              hardening&nbsp;&nbsp; | &nbsp;&nbsp; With swelling&nbsp;&nbsp; |
-              &nbsp;&nbsp; Accumulations and deposits&nbsp;&nbsp; | &nbsp;&nbsp;
-              Good for cellulite
-            </p>
+            <h3>{t("home.treatmentFour")}</h3>
+            <p>{t("home.treatmentFourCont")}</p>
+          </div>
+          <div className="treatmentTwo treatments">
+            <h3>{t("home.treatmentTwo")}</h3>
+            <p>{t("home.treatmentTwoCont")}</p>
+          </div>
+          <div className="treatmentFour treatments">
+            <h3>{t("home.treatmentFour")}</h3>
+            <p>{t("home.treatmentFourCont")}</p>
+          </div>
+          <div className="treatmentThree treatments">
+            <h3>{t("home.treatmentThree")}</h3>
+            <p>{t("home.treatmentThreeCont")}</p>
+          </div>
+          <div className="treatmentFour treatments">
+            <h3>{t("home.treatmentFour")}</h3>
+            <p>{t("home.treatmentFourCont")}</p>
+          </div>
+          <div className="treatmentThree treatments">
+            <h3>{t("home.treatmentThree")}</h3>
+            <p>{t("home.treatmentThreeCont")}</p>
           </div>
         </div>
       </div>
