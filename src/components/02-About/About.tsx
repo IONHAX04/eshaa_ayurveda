@@ -1,16 +1,29 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { FaChevronRight } from "react-icons/fa6";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import about1 from "../../assets/about/about1.png";
 import about2 from "../../assets/about/about2.png";
 
 import Glide from "@glidejs/glide";
 
+import comp1 from "../../assets/about/comp1.png";
+import comp2 from "../../assets/about/comp2.png";
+import comp3 from "../../assets/about/comp3.png";
+import comp4 from "../../assets/about/comp4.png";
+import comp5 from "../../assets/about/comp5.png";
+import comp6 from "../../assets/about/comp6.png";
+import comp7 from "../../assets/about/comp7.png";
+import comp8 from "../../assets/about/comp8.png";
+import comp9 from "../../assets/about/comp9.png";
+
+import vision from "../../assets/about/vision.png";
+import mission from "../../assets/about/mission.png";
+
 import "./About.css";
 
 export default function About() {
-  const { t } = useTranslation("global");
+  // const { t } = useTranslation("global");
 
   useEffect(() => {
     const slider = new Glide(".glide-09", {
@@ -124,44 +137,121 @@ export default function About() {
         </div>
       </div>
 
-      <div className="glidesCont" style={{ overflow: "hidden" }}>
+      <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
+        <div className="emailFormContxt w-full md:w-5/12 mx-auto">
+          <div className="flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
+            <figure className="flex-1 visImg">
+              <img
+                src={vision}
+                alt="card image"
+                className="object-cover aspect-auto"
+              />
+            </figure>
+            <div className="flex-1 p-6 sm:mx-6 sm:px-0">
+              <header className="flex gap-4 mb-4">
+                <div>
+                  <h3 className="text-3xl font-bold text-slate-700">
+                    Our Vision
+                  </h3>
+                </div>
+              </header>
+              <p>
+                To become one of the most modern Ayurveda clinics in Zurich,
+                both in intent and approach, focusing on holistic, personalized,
+                and well-planned healthcare in line with the traditional spirit
+                of Ayurveda.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="emailFormContxt w-full md:w-5/12 mx-auto">
+          <div className="flex flex-col overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 sm:flex-row">
+            <figure className="flex-1 visImg">
+              <img
+                src={mission}
+                alt="card image"
+                className="object-cover aspect-auto"
+              />
+            </figure>
+            <div className="flex-1 p-6 sm:mx-6 sm:px-0">
+              <header className="flex gap-4 mb-4">
+                <div>
+                  <h3 className="text-3xl font-bold text-slate-700">
+                    Our Mission
+                  </h3>
+                </div>
+              </header>
+              <p>
+                Eshaa Wellness seeks to guide people toward better health
+                through professional guidance, therapeutic treatment, in a
+                serene, soothing environment to enhance the balance of the mind,
+                body, and spirit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="glidesCont"
+        style={{ overflow: "hidden", padding: "50px 10px" }}
+      >
+        <h2>Health insurance companies recognized</h2>
         <div className="glide-09 relative w-full">
           {/* <!-- Slides --> */}
           <div data-glide-el="track">
             <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
               <li>
                 <img
-                  src="https://Tailwindmix.b-cdn.net/carousel/logos/carousel-logo-image-1.svg"
+                  src={comp1}
                   className="m-auto h-20 max-h-full w-auto max-w-full"
                 />
               </li>
               <li>
                 <img
-                  src="https://Tailwindmix.b-cdn.net/carousel/logos/carousel-logo-image-2.svg"
+                  src={comp2}
                   className="m-auto h-20 max-h-full w-auto max-w-full"
                 />
               </li>
               <li>
                 <img
-                  src="https://Tailwindmix.b-cdn.net/carousel/logos/carousel-logo-image-3.svg"
+                  src={comp3}
                   className="m-auto h-20 max-h-full w-auto max-w-full"
                 />
               </li>
               <li>
                 <img
-                  src="https://Tailwindmix.b-cdn.net/carousel/logos/carousel-logo-image-4.svg"
+                  src={comp4}
                   className="m-auto h-20 max-h-full w-auto max-w-full"
                 />
               </li>
               <li>
                 <img
-                  src="https://Tailwindmix.b-cdn.net/carousel/logos/carousel-logo-image-5.svg"
+                  src={comp5}
                   className="m-auto h-20 max-h-full w-auto max-w-full"
                 />
               </li>
               <li>
                 <img
-                  src="https://Tailwindmix.b-cdn.net/carousel/logos/carousel-logo-image-6.svg"
+                  src={comp6}
+                  className="m-auto h-20 max-h-full w-auto max-w-full"
+                />
+              </li>
+              <li>
+                <img
+                  src={comp7}
+                  className="m-auto h-20 max-h-full w-auto max-w-full"
+                />
+              </li>
+              <li>
+                <img
+                  src={comp8}
+                  className="m-auto h-20 max-h-full w-auto max-w-full"
+                />
+              </li>
+              <li>
+                <img
+                  src={comp9}
                   className="m-auto h-20 max-h-full w-auto max-w-full"
                 />
               </li>
