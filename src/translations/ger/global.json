@@ -44,7 +44,15 @@
         "treatmentThree": "PADHABHYANGA",
         "treatmentThreeCont": "Beseitigt Hornhaut und Risse | Müdigkeit, Taubheit und Steifheit | Verbessert das Sehen | Lindert Schlafstörungen | Gegen Nervosität | Summen im Kopf",
         "treatmentFour": "PINDASVEDA",
-        "treatmentFourCont": "Gut bei Bewegungseinschränkungen | Muskelverhärtung | Bei Schwellungen | Ansammlungen und Ablagerungen | Gut gegen Cellulite"
+        "treatmentFourCont": "Gut bei Bewegungseinschränkungen | Muskelverhärtung | Bei Schwellungen | Ansammlungen und Ablagerungen | Gut gegen Cellulite",
+        "treatmentFive": "FOREHEAD OIL POURING (SHIRODHARA)",
+        "treatmentFiveCont": "Relieves headaches and migraines | Eliminates mental exhaustion and tension | Helps with fatigue and insomnia | Reduces numbness | Numbness and paralysis | Helpful for anxiety | Depression and psychoses as well as high blood pressure",
+        "treatmentSix": "SHIRO VASTHI",
+        "treatmentSixCont": "Helps with facial paralysis | Insomnia | Headaches | Migraines, numbness in the head | Dryness of the mouth and nose | Ear pain | Ringing in the ears and other head ailments",
+        "treatmentSeven": "NJAVARA KIZHI",
+        "treatmentSevenCont": "This is a rejuvenation technique that uses linen bags. | The bags contain cooked Njavara rice, which is continuously soaked in a mixture of herbal milk decoction. | It is a specific form of sweating, where the heat and massage help the body to heal. | This method is used to relieve certain muscle, rheumatic, joint, and skin complaints. | The body becomes smooth and supple, and stress and stiffness are removed from the body.",
+        "treatmentEight": "UDWARTHANAM",
+        "treatmentEightCont": "This is a full-body treatment with fine medicinal powder to invigorate and energize the body. | The massage promotes better digestion, healthier skin, firmer muscle tone, circulation, and cellulite reduction. | Particularly recommended for those who are overweight | and those with any rheumatic complaints."
     },
     "treatments": {
         "treatmentHeader": "Unsere Behandlungen",

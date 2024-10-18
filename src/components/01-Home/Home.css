@@ -204,7 +204,11 @@
   .treatmentOne,
   .treatmentTwo,
   .treatmentThree,
-  .treatmentFour {
+  .treatmentFour,
+  .treatmentFive,
+  .treatmentSix,
+  .treatmentSeven,
+  .treatmentEight {
     background-attachment: scroll;
   }
 }
@@ -212,7 +216,11 @@
 .treatmentOne::before,
 .treatmentTwo::before,
 .treatmentThree::before,
-.treatmentFour::before {
+.treatmentFour::before,
+.treatmentFive::before,
+.treatmentSix::before,
+.treatmentSeven::before,
+.treatmentEight::before {
   content: "";
   position: absolute;
   inset-block-start: 0;
@@ -226,7 +234,11 @@
 .treatmentOne > *,
 .treatmentTwo > *,
 .treatmentThree > *,
-.treatmentFour > * {
+.treatmentFour > *,
+.treatmentFive > *,
+.treatmentSix > *,
+.treatmentSeven > *,
+.treatmentEight > * {
   position: relative;
   z-index: 2;
 }

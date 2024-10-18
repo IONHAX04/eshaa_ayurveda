@@ -6,7 +6,7 @@ export default function Treatments() {
   const { t } = useTranslation("global");
 
   return (
-    <div className="treat">
+    <div className="treat pt-5">
       <div className="treatmentsPage">
         <div className="ourTreatments ">
           <h2>{t("treatments.treatmentHeader")}</h2>
@@ -31,25 +31,21 @@ export default function Treatments() {
             <h3>{t("home.treatmentFour")}</h3>
             <p>{t("home.treatmentFourCont")}</p>
           </div>
-          <div className="treatmentTwo treatments">
-            <h3>{t("home.treatmentTwo")}</h3>
-            <p>{t("home.treatmentTwoCont")}</p>
+          <div className="treatmentFive treatments">
+            <h3>{t("home.treatmentFive")}</h3>
+            <p>{t("home.treatmentFiveCont")}</p>
           </div>
-          <div className="treatmentFour treatments">
-            <h3>{t("home.treatmentFour")}</h3>
-            <p>{t("home.treatmentFourCont")}</p>
+          <div className="treatmentSix treatments">
+            <h3>{t("home.treatmentSix")}</h3>
+            <p>{t("home.treatmentSixCont")}</p>
           </div>
-          <div className="treatmentThree treatments">
-            <h3>{t("home.treatmentThree")}</h3>
-            <p>{t("home.treatmentThreeCont")}</p>
+          <div className="treatmentSeven treatments">
+            <h3>{t("home.treatmentSeven")}</h3>
+            <p>{t("home.treatmentSevenCont")}</p>
           </div>
-          <div className="treatmentFour treatments">
-            <h3>{t("home.treatmentFour")}</h3>
-            <p>{t("home.treatmentFourCont")}</p>
-          </div>
-          <div className="treatmentThree treatments">
-            <h3>{t("home.treatmentThree")}</h3>
-            <p>{t("home.treatmentThreeCont")}</p>
+          <div className="treatmentEight treatments">
+            <h3>{t("home.treatmentEight")}</h3>
+            <p>{t("home.treatmentEightCont")}</p>
           </div>
         </div>
       </div>
