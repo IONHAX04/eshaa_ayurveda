@@ -29,9 +29,9 @@
         "aboutContTwo": "Ayurveda - 5,000-year-old medical treatment has so many benefits in it as compared to the mere medical treatment, few of which include:",
         "aboutContTitle1": "Natural Healing: ",
         "abouCont1": "Ayurveda is the art and science of using herbs and oils and also many forms of therapies drawn from nature, in order to get recovered.",
-        "aboutContTitle2": "Stress Reduction:",
+        "aboutContTitle2": "Stress Reduction: ",
         "aboutCont2": "Ayurvedic treatments promote mental serenity and clarity while lowering stress and anxiety.",
-        "aboutContTitle3": "Holistic Wellness:",
+        "aboutContTitle3": "Holistic Wellness: ",
         "aboutCont3": "Ayurveda focusses on total wellness by treating the underlying causes of many kinds of illnesses.",
         "aboutContTitle4": "Personalized Care: ",
         "aboutCont4": "Each treatment plan is carefully designed around your unique dosha to achieve the full benefit of its array of advantages.",
@@ -52,7 +52,13 @@
         "treatmentSeven": "NJAVARA KIZHI",
         "treatmentSevenCont": "Das ist eine Verjüngungstechnik, die von Leinenbeuteln Gebrauch macht. | In den Beuteln befindet sich der gekochte Nhavara-Reis, der kontinuierlich in einer Mischung des pflanzlichen Milchsuds getränkt wird. | Es ist eine spezifische Variante von Schwitzen, in der die Wärme und Massage dem Körper helfen die sich zu heilen. | Diese Methode wird zur Entlastung einiger Muskel-, Rheuma-, Gelenk- und Hautbeschwerden eingesetzt. | Der Körper wird glatt und geschmeidig, Stress und Steifigkeit werden aus dem Körper entfernt.",
         "treatmentEight": "UDWARTHANAM",
-        "treatmentEightCont": "Dies ist eine Ganzkörper treatment mit feinem medizinischen Pulver zur Belebung und Energetisierung des Körpers. | Die Massage fördert bessere Verdauung, gesündere Haut, festeren Muskeltonus, Durchblutung und den Abbau von Cellulite. | Besonders empfohlen für diejenigen die Übergewicht haben | für diejenigen die irgendwelche Rheumabeschwerden haben."
+        "treatmentEightCont": "Dies ist eine Ganzkörper treatment mit feinem medizinischen Pulver zur Belebung und Energetisierung des Körpers. | Die Massage fördert bessere Verdauung, gesündere Haut, festeren Muskeltonus, Durchblutung und den Abbau von Cellulite. | Besonders empfohlen für diejenigen die Übergewicht haben | für diejenigen die irgendwelche Rheumabeschwerden haben.",
+        "gallery": "Gallery",
+        "galleryTitle": "For your Ayurveda course program and your health",
+        "galleryCont1": "ABHYANGA",
+        "galleryCont2": "PRISTHABYANGA",
+        "galleryCont3": "PINDASVEDA",
+        "galleryCont4": "SHIRO VASTHI"
     },
     "treatments": {
         "treatmentHeader": "Our Treatments",

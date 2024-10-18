@@ -30,21 +30,45 @@ interface TreatmentList {
 export default function Home() {
   const { t } = useTranslation("global");
   const treatments: Treatment[] = [
-    { image: massage, title: "Massage Therapy" },
-    { image: specialBath, title: "Special Bath" },
-    { image: facial, title: "Facial Treatment" },
-    { image: hydro, title: "Hydrotherapy" },
-    { image: group, title: "Group Therapy" },
+    { image: massage, title: t("home.treatment1") },
+    { image: specialBath, title: t("home.treatment2") },
+    { image: facial, title: t("home.treatment3") },
+    { image: hydro, title: t("home.treatment4") },
+    { image: group, title: t("home.treatment5") },
     // { image: reflxology, title: "Reflexology" },
   ];
 
   const treatmentData: TreatmentList[] = [
-    { name: "Whole Body", duration: "60 Mins", price: "150.00 CHF" },
-    { name: "Back", duration: "30 Mins", price: "120.00 CHF" },
-    { name: "Shirodhara", duration: "30 Mins", price: "120.00 CHF" },
-    { name: "Udwarthanam", duration: "60 Mins", price: "150.00 CHF" },
-    { name: "Njavara Kizhi", duration: "60 Mins", price: "150.00 CHF" },
-    { name: "Fussreflexzonen", duration: "30 Mins", price: "120.00 CHF" },
+    {
+      name: t("services.serv1Header"),
+      duration: t("services.serv1Duration"),
+      price: t("services.serv1Price"),
+    },
+    {
+      name: t("services.serv2Header"),
+      duration: t("services.serv2Duration"),
+      price: t("services.serv2Price"),
+    },
+    {
+      name: t("services.serv3Header"),
+      duration: t("services.serv3Duration"),
+      price: t("services.serv3Price"),
+    },
+    {
+      name: t("services.serv4Header"),
+      duration: t("services.serv4Duration"),
+      price: t("services.serv4Price"),
+    },
+    {
+      name: t("services.serv5Header"),
+      duration: t("services.serv5Duration"),
+      price: t("services.serv5Price"),
+    },
+    {
+      name: t("services.serv6Header"),
+      duration: t("services.serv6Duration"),
+      price: t("services.serv6Price"),
+    },
   ];
 
   return (
@@ -52,20 +76,20 @@ export default function Home() {
       <div className="homePageContents">
         <div className="homePageWelcomeCont col-lg-7 md-12">
           <h5 className="text-xl font-bold mb-4">Logo Here</h5>
-          <p className="text-lg mb-4">Experience Holistic Healing at</p>
+          <p className="text-lg mb-4"> {t("home.head1")}</p>
           <h2 className="text-4xl font-bold text-green-600 mb-4">
             Eshaa Wellness
           </h2>
           <h3 className="text-2xl mt-4 font-medium text-gray-700">
-            Power of Ayurveda for a Balanced Life.
+            {t("home.headQuote1")}
           </h3>
-          <button>Book An Appointment</button>
+          <button>{t("home.bookApp")}</button>
         </div>
       </div>
       <div className="treatments">
         <div className="homeTreatments mt-12 col-lg-10">
           <h3 className="text-3xl font-bold text-center mb-8">
-            Explore Our Treatments
+            {t("home.exploreTreatment")}
           </h3>
           <div className="grid grid-cols-1 mainCardGrids md:grid-cols-2 lg:grid-cols-5 gap-2 justify-items-center">
             {treatments.map((treatment, index) => (
@@ -81,17 +105,8 @@ export default function Home() {
       <div className="homeWelcomeContents row pb-5">
         <div className="homeContOne col-lg-5 col-md-10">
           <div className="welcomeEshaa">
-            <h3>Welcome to Eshaa Wellness! </h3>
-            <p style={{ textIndent: "2em" }}>
-              We believe in the exceptional potential of Ayurveda that can help
-              restore all elements of the mind, body, and soul back to harmony.
-              Nestled in Zurich, we offer a sanctuary of healing, where
-              Ayurvedic practices meet modern well being. Whether you are
-              seeking relief from chronic ailments or merely wish to boost your
-              energy, our Ayurvedic clinic generally stands ready to meet all
-              your needs. Explore a holistic approach to health and wellness and
-              step onto the path of balance and rejuvenation of body and mind.{" "}
-            </p>
+            <h3>{t("home.welcomeHeader")} </h3>
+            <p style={{ textIndent: "2em" }}>{t("home.welcomeHeaderCont")}</p>
           </div>
           <img style={{}} className="mt-3 mb-3 homeContOneImg" src={homeBg} />
         </div>
@@ -99,40 +114,24 @@ export default function Home() {
           <img style={{}} className="mt-3 mb-3 homeContTwoImg" src={homeBg} />
 
           <div className="aboutEshaa">
-            <h3>
-              Experience the enduring Benefits of Ayurveda: Path to Natural
-              Wellness{" "}
-            </h3>
-            <p style={{ textIndent: "2em" }}>
-              The many benefits of Ayurveda encompass both spiritual and
-              physical in order to affect the equilibrium of the body as well as
-              the mind.{" "}
-            </p>
-            <p style={{ textIndent: "2em" }}>
-              Ayurveda - 5,000-year-old medical treatment has so many benefits
-              in it as compared to the mere medical treatment, few of which
-              include:{" "}
+            <h3>{t("home.aboutHeader")}</h3>
+            <p style={{ textIndent: "2em" }}>{t("home.aboutContOne")}</p>
+            <p style={{ textIndent: "2em" }}>{t("home.aboutContTwo")}</p>
+            <p>
+              <strong>{t("home.aboutContTitle1")} </strong>
+              {t("home.abouCont1")}
             </p>
             <p>
-              <strong>Natural Healing: </strong>
-              Ayurveda is the art and science of using herbs and oils and also
-              many forms of therapies drawn from nature, in order to get
-              recovered.
+              <strong>{t("home.aboutContTitle2")} </strong>
+              {t("home.aboutCont2")}
             </p>
             <p>
-              <strong>Stress Reduction: </strong>
-              Ayurvedic treatments promote mental serenity and clarity while
-              lowering stress and anxiety.
+              <strong>{t("home.aboutContTitle3")} </strong>
+              {t("home.aboutCont3")}
             </p>
             <p>
-              <strong>Holistic Wellness:</strong>
-              Ayurveda focusses on total wellness by treating the underlying
-              causes of many kinds of illnesses.
-            </p>
-            <p>
-              <strong>Personalized Care: </strong>
-              Each treatment plan is carefully designed around your unique dosha
-              to achieve the full benefit of its array of advantages.
+              <strong>{t("home.aboutContTitle4")} </strong>
+              {t("home.aboutCont4")}
             </p>
           </div>
         </div>
@@ -150,33 +149,16 @@ export default function Home() {
           </div>
         </div>
         <div className="treatmentTwo treatments">
-          <h3>PRISTHABYANGA</h3>
-          <p>
-            Intervertebral disc regeneration &nbsp;&nbsp; | &nbsp;&nbsp;
-            Lumbago&nbsp;&nbsp; | &nbsp;&nbsp; Back pain &nbsp;&nbsp; |
-            &nbsp;&nbsp;Relieves muscle spasms and tension&nbsp;&nbsp; |
-            &nbsp;&nbsp; Improves blood circulation, lymph flow and nervous
-            system &nbsp;&nbsp;{" "}
-          </p>
+          <h3>{t("home.treatmentTwo")}</h3>
+          <p>{t("home.treatmentTwoCont")}</p>
         </div>
         <div className="treatmentThree treatments">
-          <h3>PADHABHYANGA</h3>
-          <p>
-            Eliminates cornea and cracks &nbsp;&nbsp; | &nbsp;&nbsp; Fatigue,
-            numbness and stiffness &nbsp;&nbsp; | &nbsp;&nbsp; Improves vision
-            &nbsp;&nbsp; | &nbsp;&nbsp; Relieves sleep disorders &nbsp;&nbsp; |
-            &nbsp;&nbsp; Against nervousness &nbsp;&nbsp; | &nbsp;&nbsp; Buzz in
-            the head
-          </p>
+          <h3>{t("home.treatmentThree")}</h3>
+          <p>{t("home.treatmentThreeCont")}</p>
         </div>
         <div className="treatmentFour treatments">
-          <h3>PINDASVEDA</h3>
-          <p>
-            Good for movement restrictions &nbsp;&nbsp; | &nbsp;&nbsp; Muscle
-            hardening&nbsp;&nbsp; | &nbsp;&nbsp; With swelling&nbsp;&nbsp; |
-            &nbsp;&nbsp; Accumulations and deposits&nbsp;&nbsp; | &nbsp;&nbsp;
-            Good for cellulite
-          </p>
+          <h3>{t("home.treatmentFour")}</h3>
+          <p>{t("home.treatmentFourCont")}</p>
         </div>
       </div>
 
@@ -195,8 +177,8 @@ export default function Home() {
       <div className="divider w-full md:w-8/12 mx-auto"></div>
 
       <div className="priceList">
-        <h4>Our Services</h4>
-        <h2>Pamper Yourself and Get Relaxing </h2>
+        <h4>{t("services.header")}</h4>
+        <h2>{t("services.serviceQuote")} </h2>
         <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
           <div className="emailFormContxt w-full md:w-5/12 mx-auto">
             <img
@@ -232,12 +214,8 @@ export default function Home() {
       <div className="emailContactForm mt-5 w-full md:w-10/12 mx-auto">
         <div className="emailFormContxt w-full md:w-5/12 mx-auto">
           <div className="relative my-6 enquiryTxt">
-            <h2>Get in touch Online </h2>
-            <p>
-              If you'd prefer, you can reach out to us through our contact form
-              on this site as well. Just fill in the particulars and we'll get
-              back in touch with you shortly.{" "}
-            </p>
+            <h2>{t("contact.formHeader")} </h2>
+            <p>{t("contact.formQuote")}</p>
           </div>
           <div className="relative my-6">
             <input
@@ -251,7 +229,7 @@ export default function Home() {
               htmlFor="name"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Name
+              {t("contact.name")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +263,7 @@ export default function Home() {
               htmlFor="email"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Email
+              {t("contact.emailUr")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -319,7 +297,7 @@ export default function Home() {
               htmlFor="phone"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Phone
+              {t("contact.mobile")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -352,7 +330,7 @@ export default function Home() {
               htmlFor="message"
               className="cursor-text peer-focus:cursor-default peer-autofill:-top-2 absolute left-2 -top-2 z-[1] px-2 text-xs text-slate-400 transition-all before:absolute before:top-0 before:left-0 before:z-[-1] before:block before:h-full before:w-full before:bg-white before:transition-all peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-10 peer-placeholder-shown:text-sm peer-required:after:text-pink-500 peer-required:after:content-['\00a0*'] peer-invalid:text-pink-500 peer-focus:left-2 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-emerald-500 peer-disabled:cursor-not-allowed peer-disabled:text-slate-400 peer-disabled:before:bg-transparent"
             >
-              Your Message
+              {t("contact.comment")}
             </label>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +353,7 @@ export default function Home() {
             </svg>
           </div>
           <div className="relative my-6 sendBtn">
-            <button className="messageBtn">Send Message</button>
+            <button className="messageBtn">{t("contact.send")}</button>
           </div>
         </div>
         <div className="emailFormContxt w-full md:w-5/12 mx-auto">
